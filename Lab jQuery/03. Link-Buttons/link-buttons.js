@@ -1,3 +1,7 @@
 function attachEvents() {
-    // TODO:
+    $('.button').click(function () {
+        $('.selected').removeClass('selected');
+        $(this).addClass('selected');
+    });
+
 }
