@@ -11,6 +11,8 @@ function attachEventsListeners() {
     };
     let convertBtn = document.getElementById('convert').addEventListener('click', function () {
 
-        document.getElementById('outputDistance').value = Number(document.getElementById('inputDistance').value) * distance[document.getElementById('inputUnits').value] / distance[document.getElementById('outputUnits').value];
+        document.getElementById('outputDistance').value =
+            Number(document.getElementById('inputDistance').value) 
+            * distance[document.getElementById('inputUnits').value] / distance[document.getElementById('outputUnits').value];
     });
 }
