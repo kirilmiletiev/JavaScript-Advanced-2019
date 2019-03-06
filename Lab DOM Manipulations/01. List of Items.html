@@ -1,0 +1,12 @@
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+<h1>List of Items</h1>
+<ul id="items"><li>First</li><li>Second</li></ul>
+<input type="text" id="newItemText" />
+<input type="button" value="Add" onclick="addItem()">
+<script>
+    function addItem() {
+        let li = document.createElement('li');
+        li.textContent = document.getElementById('newItemText').value;
+        document.getElementById('items').appendChild(li);
+    }
+</script>

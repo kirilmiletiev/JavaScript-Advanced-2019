@@ -1,0 +1,22 @@
+<h1>List of Items</h1>
+<ul id="items"></ul>
+<input type="text" id="newText" />
+<input type="button" value="Add"
+       onclick="addItem()">
+<script>
+  function addItem() {
+      let li = document.createElement('li');
+      li.textContent = document.getElementById('newText').value;
+      let button = document.createElement('a');
+      button.textContent = '[Delete]';
+      button.href = '#';
+      button.addEventListener('click', deleteItem);
+
+      function deleteItem() {
+          li.remove();
+      }
+
+      li.appendChild(button);
+      document.getElementById('items').appendChild(li);
+  }
+</script>
