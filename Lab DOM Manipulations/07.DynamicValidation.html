@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Focus</title>
+    <style>.error { border: 2px solid red; }</style>
+</head>
+<body onload="validate()">
+<label for="email">Enter email:</label>
+<input id="email" type="text"/>
+<script>
+    function validate() {
+        const regex = /([a-z]+@[a-z]+.[a-z]+)/gm;
+        let email = document.getElementById('email');
+        email.addEventListener("change", function (e) {
+            email.className = !regex.test(email.value) ? 'error' : '';
+        })
+    }
+</script>
+</body>
+</html>
